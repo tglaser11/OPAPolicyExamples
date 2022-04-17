@@ -2,6 +2,14 @@ package http.request.authz
 
 import future.keywords.in
 
+### POLICY ###
+# Deny all access to a client data unless all conditions are met:
+# --user has valid JWT
+# --user role is manager
+# --user has servicing role (advisor_user) on a contract with that 
+#   has client listed
+##############
+
 # deny allow by default
 default allow = false
 
@@ -18,23 +26,20 @@ user_is_manager {
 	Roles[_] == "Manager"
 }
 
-# check external data
+# check external data from mock datastore
 contracts := data.contracts
-
-
-# identify client
-clientId := parsed_path[count(parsed_path)-1]
 
 #### check advisor has role on contract of owner
 #### would be replaced by external service call
-# find all indices i that have value of clientId
-# TODO
+# TODO -- illustrate this with http.send remote API call
 advisor_connected_with_client {
     some i
     contracts[i].advisor_user == subject
     contracts[i].owner_leid == clientId
 }
 
+# identify client
+clientId := parsed_path[count(parsed_path)-1]
 
 # Rego fucntion to validate JWT
 valid_jwt := io.jwt.verify_hs256(jwt, certificate)
@@ -52,5 +57,5 @@ jwt := input.encodedJwt
 method := input.method      # GET, POST, etc.
 path := input.path          # ex. /item/1234
 
-# Todo:  Find a way to pull in IdP cert dynamically
+# Todo:  Find a way to pull in IdP cert dynamically for validation
 certificate := "qwertyuiopasdfghjklzxcvbnm123456"
