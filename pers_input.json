@@ -1,0 +1,31 @@
+{
+    "user_roles": {
+        "tfg": [
+            "admin"
+        ],
+        "rth": [
+            "FR-Risk",
+            "FR-Inv"
+        ],
+        "eve": [
+            "FR-Risk"
+        ]
+    },
+     "tenure": {
+        "tfg": "10",
+        "rth": "20",
+        "eve": "30"
+    },
+    "credentials": {
+        "tfg": [
+            "series7", "cfa"
+        ],
+        "rth": [
+            "series7", "cfa"
+        ],
+        "eve": [
+            "series7", "cfa"
+        ]
+    }
+
+}
