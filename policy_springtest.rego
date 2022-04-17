@@ -32,6 +32,7 @@ clientId := parsed_path[count(parsed_path)-1]
 advisor_connected_with_client {
     some i
     contracts[i].advisor_user == subject
+    contracts[i].owner_leid == clientId
 }
 
 
