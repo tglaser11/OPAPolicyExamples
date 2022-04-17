@@ -1,0 +1,17 @@
+{
+    "advisors": [
+        {"user": "gla1234","credentials": ["cfa","series7"]},
+        {"user": "abc1234","credentials": ["cfa","series7"]},
+        {"user": "tst1234","credentials": ["cfa"]},
+        {"user": "bob1234","credentials": ["cfa","loma fellow"]},
+        {"user": "def1234","credentials": ["cfa","series7"]}
+    ],
+    "contracts": [
+        {"contractid": "10000", "advisor_user": "gla1234", "owner_leid": "1001"},
+        {"contractid": "10001", "advisor_user": "tst1234", "owner_leid": "1002"},
+        {"contractid": "10002", "advisor_user": "abc1234", "owner_leid": "1005"},
+        {"contractid": "10003", "advisor_user": "def1234", "owner_leid": "1003"},
+        {"contractid": "10004", "advisor_user": "abc1234", "owner_leid": "1004"},
+        {"contractid": "10005", "advisor_user": "bob1234", "owner_leid": "1001"}
+    ]
+}
