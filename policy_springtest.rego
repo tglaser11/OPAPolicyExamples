@@ -3,15 +3,16 @@ package http.request.authz
 import future.keywords.in
 
 ### POLICY ###
-# Deny all access to a client data unless all conditions are met:
+# Deny all access to a client record unless all conditions are met:
 # --user has valid JWT
 # --user role is manager
 # --user has servicing role (advisor_user) on a contract with that 
 #   has client listed
-##############
+###############
 ### TODO ###
 # --Illustrate Unit Tests
 # --Illustrate use of remote API PIP call using http.send
+# --Illustrate how to filter multiple clients using /client route
 ##############
 
 # deny allow by default
