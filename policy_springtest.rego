@@ -9,6 +9,10 @@ import future.keywords.in
 # --user has servicing role (advisor_user) on a contract with that 
 #   has client listed
 ##############
+### TODO ###
+# --Illustrate Unit Tests
+# --Illustrate use of remote API PIP call using http.send
+##############
 
 # deny allow by default
 default allow = false
