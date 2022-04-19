@@ -12,9 +12,9 @@
         ]
     },
      "tenure": {
-        "tfg": "10",
-        "rth": "20",
-        "eve": "30"
+        "tfg": 10,
+        "rth": 20,
+        "eve": 30
     },
     "credentials": {
         "tfg": [

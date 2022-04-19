@@ -4,6 +4,10 @@ package advisor.pers.authz
 
 import future.keywords.in
 
+default can_trade = false
+default margin_account = false
+default pershing_role = "planner"
+
 can_trade {
 	user_is_admin
 }
@@ -36,5 +40,5 @@ user_is_CFA {
 }
 
 margin_account {
-	data.tenure[input.user] > 15
+	data.tenure[input.user] > 20
 }
